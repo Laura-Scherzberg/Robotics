@@ -1,0 +1,40 @@
+Getting set up (docker)
+open docker folder on terminal:
+.\run-vnc.ps1
+.\run-ros.ps1
+
+if need be (to start dock without vnc, should always do the code above)
+in terminal:
+1-docker start robotics
+2-docker exec -it robotics /bin/sh
+3-bash
+
+Set up tmux:
+tmux new -s (nome do server desejado)
+
+ctrl b + d --> detatch current session
+tmux a --> attach last session
+
+ctrl b + % --> split vertically
+ctrl b + " --> split horizontally
+ctrl b + z --> min/max pane
+ctrl b + setas --> cycle pane focus 
+ctrl b + x --> close pane
+
+ctrl b + c --> new windows
+ctrl b + , --> rename windows
+ctrl b + n --> cycle focus
+ctrl b + & --> close window
+
+GUI: 
+http://localhost:8080/   --> pagina base
+http://localhost:8080/vnc.html ---> GUI, need vnc dock activated
+click connect
+
+turtle example:
+you'll need at least 3 panes
+1st - roscore
+2nd - rosrun turtlesim turtlesim_node ( can use tab)(should see turtle in gui)
+3rd - rosrun turtlesim turtle_teleop_key
+in case of doubt use tab
+
