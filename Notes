@@ -9,6 +9,9 @@ in terminal:
 2-docker exec -it robotics /bin/sh
 3-bash
 
+voltar atras no cd: cd ..
+list active nodes: rostopic list
+
 Set up tmux:
 tmux new -s (nome do server desejado)
 
@@ -56,3 +59,31 @@ rosbag play -l demo.bag
 
 outra visualizaçao:
 rosrun plotjuggler plotjuggler
+
+roscore escondido:
+tmux new -s server
+roscore
+Ctr+b  d
+
+launch launchfile:
+(no need to start roscore)
+roslaunch
+roslaunch pub_sub multi_turtle.launch  
+
+to visualize whats happening: rqt_graph
+
+Run message: (ask professor, last not running)
+catkin_make
+rosrun custom_messages pub_custom
+rostopic echo /chatter --> if error of "builing message": source devel/setup.bash
+
+
+rosrun service add_two_int (idk dude)
+
+pub_sub_same:
+catkin_make
+rosrun pub_sub_same test_pub
+rosrun pub_sub_same test_sub
+
+parameter launch
+roslaunch parameter_test param_set.launch
