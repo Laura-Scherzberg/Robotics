@@ -87,3 +87,17 @@ rosrun pub_sub_same test_sub
 
 parameter launch
 roslaunch parameter_test param_set.launch
+
+to reconfigure parameters:
+ rosrun rqt_reconfigure rqt_reconfigure
+
+demo3.bag:
+rosbag info demo3.bag
+rosbag play -l demo3.bag --> -l is so it loops
+rostopic echo tf --> testing
+//im missing a rosrun rqt_ ...
+rviz
+
+
+tf
+roslaunch tf_examples turtle.launch
